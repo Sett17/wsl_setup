@@ -12,5 +12,8 @@ wsl --install -d Ubuntu-22.04
 ```
 
 ```bash
+git clone https://github.com/Sett17/wsl_setup.git
+cd wsl_setup
+chmod +x *
 ./run.sh
 ```
