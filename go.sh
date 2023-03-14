@@ -7,5 +7,5 @@ echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
 
 source ~/.bashrc
 
-go install github.com/jesseduffield/lazygit@latest
-go install github.com/sett17/mdpaper/v2@latest
+/usr/local/go/bin/go install github.com/jesseduffield/lazygit@latest
+/usr/local/go/bin/go install github.com/sett17/mdpaper/v2@latest

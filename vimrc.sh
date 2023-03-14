@@ -1,4 +1,4 @@
-set nocompatible
+echo 'set nocompatible
 
 filetype  on
 filetype plugin on
@@ -25,4 +25,4 @@ set history=100
 
 set wildmenu
 set wildmode=list:longest
-map <F7> gg=G<C-o><C-o>
+map <F7> gg=G<C-o><C-o>' > ~/.vimrc
