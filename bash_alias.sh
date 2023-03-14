@@ -1,4 +1,5 @@
 echo 'eval "$(starship init bash)"' > ~/.bash_aliases
+echo 'bind -f ~/.inputrc' >> ~/.bash_aliases
 echo " alias l='exa -l'
 alias lh='exa -l -s changed'
 alias goto='cd '

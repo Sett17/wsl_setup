@@ -31,5 +31,5 @@ echo -e '\e[1;32mCopy ssh\e[0m'
 echo -e '\e[1;32mConfigure gh\e[0m'
 ./gh.sh
 
-bind -f ~/.inputrc
+
 source ~/.bashrc
