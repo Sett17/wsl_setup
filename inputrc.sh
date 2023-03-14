@@ -5,4 +5,3 @@ set bell-style none
 ";5C": forward-word
 "5~": kill-word
 "\C-H": shell-backward-kill-word' > ~/.inputrc
-bind -f ~/.inputrc
