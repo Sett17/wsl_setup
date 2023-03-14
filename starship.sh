@@ -58,6 +58,7 @@ $azure\
 $crystal\
 $cmd_duration\
 $line_break\
+$character\
 """
 
 [directory]
@@ -190,3 +191,4 @@ format = "via [$symbol]($style)"
 [zig]
 format = "via [$symbol]($style)"
 ' > ~/.config/starship.toml
+starship prompt
