@@ -1,3 +1,5 @@
+touch ~/.hushlogin
+
 sudo apt update
 sudo apt install python3-pip --assume-yes
 pip install --user git+https://github.com/cpbotha/xdg-open-wsl.git
