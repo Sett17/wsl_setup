@@ -57,6 +57,7 @@ $openstack\
 $azure\
 $crystal\
 $cmd_duration\
+$line_break\
 """
 
 [directory]
