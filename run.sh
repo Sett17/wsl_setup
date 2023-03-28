@@ -19,8 +19,8 @@ echo -e '\e[1;32mConfigure inputrc\e[0m'
 echo -e '\e[1;32mConfigure bash_aliases\e[0m'
 ./bash_alias.sh
 
-echo -e '\e[1;32mInstall z\e[0m'
-./z.sh
+# echo -e '\e[1;32mInstall z\e[0m'
+# ./z.sh
 
 echo -e '\e[1;32mConfigure vimrc\e[0m'
 ./vimrc.sh
