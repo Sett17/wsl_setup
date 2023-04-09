@@ -52,7 +52,6 @@ $conda\
 $meson\
 $spack\
 $aws\
-$gcloud\
 $openstack\
 $azure\
 $crystal\
