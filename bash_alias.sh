@@ -1,9 +1,6 @@
-echo 'eval "$(~/.cargo/bin/starship init bash)"' > ~/.bash_aliases
-cargo install zoxide
-go install github.com/junegunn/fzf@latest
-echo 'eval "$(~/.cargo/bin/zoxide init bash)"' >> ~/.bash_aliases
+echo 'eval "$(~/.cargo/bin/zoxide init bash)"' > ~/.bash_aliases
 echo 'bind -f ~/.inputrc' >> ~/.bash_aliases
-echo " alias l='exa -l -a '
+echo "alias l='exa -l'
 alias lh='exa -l -s changed'
 alias lg='lazygit '
 alias v='vim '

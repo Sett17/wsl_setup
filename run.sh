@@ -10,9 +10,6 @@ echo -e '\e[1;32mInstall rust things\e[0m'
 echo -e '\e[1;32mGo things\e[0m'
 ./go.sh
 
-echo -e '\e[1;32mConfigure starship\e[0m'
-./starship.sh
-
 echo -e '\e[1;32mConfigure inputrc\e[0m'
 ./inputrc.sh
 
