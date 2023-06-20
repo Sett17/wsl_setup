@@ -1,34 +1,24 @@
-echo -e '\e[1;32mConfigure sudo\e[0m'
-./sudo.sh
+execute_task() {
+    task_name=$1
+    if [ ! -f "did_${task_name}" ]; then
+        printf '\e[1;32mExecuting task %s\e[0m\n' "${task_name}"
+        ./${task_name}.sh
+        touch "did_${task_name}"
+    else
+        printf '\e[1;33mSkipping task %s\e[0m\n' "${task_name}"
+    fi
+}
 
-echo -e '\e[1;32mInstall basics\e[0m'
-./basics.sh
-
-echo -e '\e[1;32mInstall rust things\e[0m'
-./rust.sh
-
-echo -e '\e[1;32mGo things\e[0m'
-./go.sh
-
-echo -e '\e[1;32mConfigure inputrc\e[0m'
-./inputrc.sh
-
-echo -e '\e[1;32mConfigure bash_aliases\e[0m'
-./bash_alias.sh
-
-# echo -e '\e[1;32mInstall z\e[0m'
-# ./z.sh
-
-echo -e '\e[1;32mConfigure vimrc\e[0m'
-./vimrc.sh
-
-echo -e '\e[1;32mCopy ssh\e[0m'
-./ssh.sh
-
-echo -e '\e[1;32mConfigure gh\e[0m'
-./gh.sh
-
-echo -e '\e[1;32mConfigure tmux\e[0m'
-./tmux.sh
+execute_task "sudo"
+execute_task "basics"
+execute_task "rust"
+execute_task "go"
+execute_task "starship"
+execute_task "inputrc"
+execute_task "bash_alias"
+execute_task "vimrc"
+execute_task "ssh"
+execute_task "gh"
+execute_task "tmux"
 
 source ~/.bashrc
