@@ -6,6 +6,7 @@ set -g default-terminal "screen-256color"
 set -g history-limit 10000
 
 set-option -g history-file ~/.tmux_history
+set-option status-style fg=brightblack
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
@@ -16,8 +17,8 @@ set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 
 unbind C-b
-set-option -g prefix C-a
-bind-key C-a send-prefix
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
 
 bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"' > ~/.tmux.conf
