@@ -1,5 +1,4 @@
 echo 'eval "$(~/.cargo/bin/zoxide init bash)"' > ~/.bash_aliases
-echo 'eval "$(starship init bash)"' >> ~/.bash_aliases
 echo 'bind -f ~/.inputrc' >> ~/.bash_aliases
 echo "alias l='exa -l'
 alias lh='exa -l -s changed'
@@ -13,4 +12,5 @@ fastpush () { DATE=`date +"%D %T"`; git add . --all 2> /dev/null && git commit -
 echo "export EDITOR=vim" >> ~/.bash_aliases
 echo "export OPENAI_API_KEY=''" >> ~/.bash_aliases
 echo "export WIN_HOME=$(wslpath "$(wslvar USERPROFILE)")" >> ~/.bash_aliases
+echo 'eval "$(~/.cargo/bin/starship init bash)"' >> ~/.bash_aliases
 source ~/.bashrc
