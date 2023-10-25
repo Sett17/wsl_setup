@@ -22,5 +22,6 @@ execute_task "vimrc"
 execute_task "ssh"
 execute_task "gh"
 execute_task "tmux"
+execute_task "nvim"
 
 source ~/.bashrc
