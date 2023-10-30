@@ -1,12 +1,15 @@
 sudo apt install tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo '
 set -g default-terminal "screen-256color"
 
 set -g history-limit 10000
 
 set-option -g history-file ~/.tmux_history
+set-option -g allow-rename off
 set-option status-style fg=brightblack
+
+set -g status-right-length 70
+set -g status-right "#(uptime -p | sed s/up// | sed s/,//g) #{=21:pane_title} %H:%M %d-%b-%y %A"
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
@@ -35,4 +38,7 @@ bind -n M-Down select-pane -D
 
 set -g mouse on
 set-environment -g PATH "/usr/local/bin:/bin:/usr/bin"
-run '~/.tmux/plugins/tpm/tpm'' >> ~/.tmux.conf
+
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+' >> ~/.tmux.conf
